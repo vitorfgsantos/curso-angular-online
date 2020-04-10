@@ -1,5 +1,9 @@
-<app-header></app-header>
+<app-header [title]="title"></app-header>
 
-<app-home></app-home>
+<app-exercicio-data-binding
+  [palavra]="palavra"
+  [color]="'green'"
+  (clicado)="eventoRecebido($event)"
+></app-exercicio-data-binding>
 
 <app-footer></app-footer>
