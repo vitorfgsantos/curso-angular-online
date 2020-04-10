@@ -35,3 +35,22 @@
 </ul>
 
 <p *ngFor="let fruta of listaFrutas"> {{ fruta }} </p>
+
+<hr>
+<h2> Resolução do exercício </h2>
+
+<ul>
+  <li *ngFor="let memesAgrupados of MEMES_AGRUPADOS_POR_CATEGORIA">
+    <h2> {{ memesAgrupados.categoria }} </h2>
+    
+    <div *ngFor="let meme of memesAgrupados.memes; let par = even">
+      <img [src]="PREFIXO_IMAGEM_URL + meme.imagemURL" *ngIf="par; else blocoPar">
+      <ng-template #blocoPar>
+        <h2> PAR </h2>
+      </ng-template>
+    </div>
+
+  </li>
+</ul>
+
+<br><br><br><br>
