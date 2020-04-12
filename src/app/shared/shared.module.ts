@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { ExercicioContadorComponent } from './components/exercicio-contador/exercicio-contador.component';
 import { ExercicioDataBindingComponent } from './components/exercicio-data-binding/exercicio-data-binding.component';
@@ -20,7 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
     ExercicioPipesComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
