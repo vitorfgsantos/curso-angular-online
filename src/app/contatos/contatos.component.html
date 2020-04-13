@@ -1,0 +1,26 @@
+<div class="container text-center p-5">
+
+  <div class="spinner-border" role="status" *ngIf="estaCarregando">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <div *ngIf="erroNoCarregamento">
+    <h2>Deu erro :(</h2>
+    <button (click)="carregarContatos()"> Tentar novamente </button>
+  </div>
+
+  <div *ngIf="!estaCarregando && !erroNoCarregamento">
+
+    <table class="table table-hover">
+      <tr>
+        <th> Nome </th>
+      </tr>
+    
+      <tr *ngFor="let contato of contatos">
+        <td> {{ contato.nome }} </td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>

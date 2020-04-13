@@ -21,7 +21,6 @@
         <th> Descrição </th>
         <th> Valor </th>
         <th> Categoria </th>
-        <th> Ações </th>
       </tr>
     
       <tr *ngFor="let transacao of transacoes">
@@ -30,9 +29,6 @@
         <td> {{ transacao.descricao }} </td>
         <td> {{ transacao.valor | currency:'BRL' }} </td>
         <td> {{ transacao.categoria }} </td>
-        <td>
-          <button class="btn btn-primary"> Ver detalhes</button>
-        </td>
       </tr>
     </table>
 
