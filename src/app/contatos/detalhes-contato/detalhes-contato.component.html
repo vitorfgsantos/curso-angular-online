@@ -1,0 +1,25 @@
+<div class="container text-center p-5">
+
+  <div class="spinner-border" role="status" *ngIf="estaCarregando">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <div *ngIf="erroNoCarregamento">
+    <h2>Deu erro :(</h2>
+    <button (click)="carregarContato()"> Tentar novamente </button>
+  </div>
+
+  <div *ngIf="!estaCarregando && !erroNoCarregamento">
+    <p> Nome: {{ contato.nome }} </p>
+    <p> CPF: {{ contato.cpf }} </p>
+    <p> Banco: {{ contato.banco }} </p>
+    <p> Agência: {{ contato.ag }} </p>
+    <p> Conta corrente: {{ contato.cc }} </p>
+  </div>
+
+  <br>
+  <button class="btn btn-primary" (click)="voltar()">
+    Voltar
+  </button>
+
+</div>

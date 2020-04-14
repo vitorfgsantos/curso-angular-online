@@ -14,10 +14,14 @@
     <table class="table table-hover">
       <tr>
         <th> Nome </th>
+        <th> Ações </th>
       </tr>
     
       <tr *ngFor="let contato of contatos">
         <td> {{ contato.nome }} </td>
+        <td> 
+          <button class="btn btn-primary" (click)="irParaDetalhes(contato.id)"> Ver detalhes </button>
+        </td>
       </tr>
     </table>
 
