@@ -6,11 +6,11 @@ import { Contato } from '../contatos.interfaces';
 import { ContatosService } from '../contatos.service';
 
 @Component({
-  selector: 'app-detalhes-contato',
-  templateUrl: './detalhes-contato.component.html',
-  styleUrls: ['./detalhes-contato.component.scss']
+  selector: 'app-detalhar-contato',
+  templateUrl: './detalhar-contato.component.html',
+  styleUrls: ['./detalhar-contato.component.scss']
 })
-export class DetalhesContatoComponent implements OnInit {
+export class DetalharContatoComponent implements OnInit {
 
   contato: Contato;
   estaCarregando: boolean;
