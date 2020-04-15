@@ -3,7 +3,7 @@
   <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="form-signin pt-5">
 
     <div class="p-2">
-      <input 
+      <input
         type="email" class="form-control"
         placeholder="Email" name="email"
         [(ngModel)]="email" required email
@@ -20,10 +20,20 @@
         <div *ngIf="exibeErro('password', form)" class="invalid-feedback"> Password inválido. </div>
     </div>
 
+    <p *ngIf="erroNoLogin">
+      Usuário ou senha inválidos.
+    </p>
+
     <div class="p-2">
-      <button class="btn btn-lg btn-primary btn-block" type="submit"> Entrar</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="estaCarregando">
+        Entrar
+      </button>
     </div>
 
   </form>
+
+  <div *ngIf="estaCarregando" class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
   
 </div>
