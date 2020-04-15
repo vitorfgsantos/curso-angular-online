@@ -12,17 +12,18 @@ const routes: Routes = [{
   loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
   canActivate: [EstaLogadoGuard],
 }, {
-  path: 'login',
-  component: LoginComponent,
-  canActivate: [NaoEstaLogadoGuard],
-}, {
   path: 'extrato',
+  loadChildren: () => import('./extrato/extrato.module').then(m => m.ExtratoModule),
   component: ExtratoComponent,
   canActivate: [EstaLogadoGuard],
 }, {
   path: 'contatos',
   loadChildren: () => import('./contatos/contatos.module').then(m => m.ContatosModule),
   canActivate: [EstaLogadoGuard],
+}, {
+  path: 'login',
+  component: LoginComponent,
+  canActivate: [NaoEstaLogadoGuard],
 }, {
   path: '',
   redirectTo: 'home',
