@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Usuario } from '../shared/interfaces/usuario.interface';
-import { AuthService } from '../shared/services/auth/auth.service';
+import { Usuario } from '../../shared/interfaces/usuario.interface';
+import { AuthService } from '../../shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-home',
