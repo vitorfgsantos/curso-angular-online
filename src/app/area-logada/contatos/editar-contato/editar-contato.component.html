@@ -26,31 +26,33 @@
           placeholder="CPF" formControlName="cpf"
           [class.is-invalid]="exibeErro('cpf')">
       </div>
-  
-      <div class="form-group">
-        <label for="banco">Banco</label>
-        <input
-          type="text" class="form-control" id="banco"
-          placeholder="Banco" formControlName="banco"
-          [class.is-invalid]="exibeErro('banco')">
-      </div>
-      
-      <div class="form-group">
-        <label for="ag">Agência</label>
-        <input
-          type="number" class="form-control" id="ag"
-          placeholder="Agência" formControlName="ag"
-          [class.is-invalid]="exibeErro('ag')">
-      </div>
-  
-      <div class="form-group">
-        <label for="cc">Conta</label>
-        <input
-          type="text" class="form-control" id="cc"
-          placeholder="Conta" formControlName="cc"
-          [class.is-invalid]="exibeErro('cc')">
-      </div>
-  
+
+      <!-- <div formGroupName="dadosBancarios"> -->
+        <div class="form-group">
+          <label for="banco">Banco</label>
+          <input
+            type="text" class="form-control" id="banco"
+            placeholder="Banco" formControlName="banco"
+            [class.is-invalid]="exibeErro('dadosBancarios.banco')">
+        </div>
+        
+        <div class="form-group">
+          <label for="ag">Agência</label>
+          <input
+            type="number" class="form-control" id="ag"
+            placeholder="Agência" formControlName="ag"
+            [class.is-invalid]="exibeErro('dadosBancarios.ag')">
+        </div>
+    
+        <div class="form-group">
+          <label for="cc">Conta</label>
+          <input
+            type="text" class="form-control" id="cc"
+            placeholder="Conta" formControlName="cc"
+            [class.is-invalid]="exibeErro('dadosBancarios.cc')">
+        </div>  
+      <!-- </div> -->
+    
       <button class="btn btn-primary" (click)="onSubmit()">
         {{ estaEditando() ? 'Salvar contato' : 'Criar contato' }}
       </button>
