@@ -41,5 +41,4 @@ export class ContatosService {
     return this.http.delete<Contato>(this.API_URL + '/contatos/' + id, this.httpOptions);
   }
 
-
 }
